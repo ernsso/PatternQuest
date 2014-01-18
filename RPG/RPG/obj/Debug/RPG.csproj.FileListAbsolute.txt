@@ -1,0 +1,17 @@
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\bin\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\bin\Debug\RPG.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\obj\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\RPG\obj\Debug\RPG.pdb
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\RPG\obj\Debug\RPG.exe
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\RPG\obj\Debug\RPG.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\bin\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\bin\Debug\RPG.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\obj\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\RPG\obj\Debug\RPG.pdb

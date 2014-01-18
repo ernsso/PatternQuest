@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG.Access" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Access\Access.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Adjacent" Collapsed="true">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Access\Adjacent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Tunnel" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Access\Tunnel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ComportementAcheval" Collapsed="true">
+    <Position X="9.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ComportementAcheval.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ComportementApiedAvecHache" Collapsed="true">
+    <Position X="11.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ComportementApiedAvecHache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ComportementAvecArc" Collapsed="true">
+    <Position X="13.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ComportementAvecArc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ComportementAvecDague" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ComportementAvecDague.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ComportementParlerPrincesse" Collapsed="true">
+    <Position X="13.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ComportementParlerPrincesse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.EmitSoundBehavior" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Behaviors\EmitSoundBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.FightBehavior" Collapsed="true">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\FightBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.ScreamBehavior" Collapsed="true">
+    <Position X="9.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ScreamBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Behaviors.TalkBehavior" Collapsed="true">
+    <Position X="11.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Behaviors\TalkBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Characters.Archer" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Characters\Archer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Characters.Assassin" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Characters\Assassin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Characters.Knight" Collapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Characters\Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Characters.Princess" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Characters\Princess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Characters.Warrior" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Characters\Warrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Cell" Collapsed="true">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zones\Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.PatchOfLand" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zones\PatchOfLand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Zone" Collapsed="true">
+    <Position X="14.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zones\Zone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractAccess" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractGameBoard" Collapsed="true">
+    <Position X="6" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAgAAAAACAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>AbstractGameBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractGameBoardFactory" Collapsed="true">
+    <Position X="1.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAA=</HashCode>
+      <FileName>AbstractGameBoardFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractObservedSubject" Collapsed="true">
+    <Position X="3.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAIAAAABCAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractObservedSubject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractObserver" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractObserver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.AbstractZone" Collapsed="true">
+    <Position X="12.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Character" Collapsed="true">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAIAAIAAAAAAAQAAAAEAAAAAABAAgAAAAA=</HashCode>
+      <FileName>Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameBoard" Collapsed="true">
+    <Position X="6" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameBoardFactory" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameBoardFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameEnvironment" Collapsed="true">
+    <Position X="16.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.GameSimulation" Collapsed="true">
+    <Position X="16.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="GameEnvironment" Type="RPG.GameEnvironment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.032" Y="0.212" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAABCAAAAAQCAEAAAAAAAAAAAAAAAAAIAAACAA=</HashCode>
+      <FileName>GameSimulation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameEnvironment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RPG.LabyrinthFactory" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="RPG.AbstractGameBoardFactory" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="1.812" />
+        <Point X="2.5" Y="1.95" />
+        <Point X="3.625" Y="1.95" />
+        <Point X="3.625" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAA=</HashCode>
+      <FileName>LabyrinthFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG.Organization" Collapsed="true">
+    <Position X="3.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RPG.Mode" Collapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAACA=</HashCode>
+      <FileName>Organization.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

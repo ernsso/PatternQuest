@@ -1,0 +1,63 @@
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\bin\Debug\GUI.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\bin\Debug\GUI.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI.g.resources
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\ResourcesDictionaries\Cell.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\App.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\bin\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\bin\Debug\RPG.pdb
+H:\ESGI\Design Patern\RPG\GUI\obj\x86\Debug\ResourcesDictionaries\Cell.baml
+H:\ESGI\Design Patern\RPG\GUI\obj\x86\Debug\App.baml
+H:\ESGI\Design Patern\RPG\GUI\obj\x86\Debug\App.g.cs
+H:\ESGI\Design Patern\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.lref
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\bin\Debug\GUI.exe
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\bin\Debug\GUI.pdb
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\bin\Debug\RPG.exe
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\bin\Debug\RPG.pdb
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\ResourcesDictionaries\Cell.baml
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\App.baml
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\App.g.cs
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.cache
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.lref
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\MainWindow.baml
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.g.resources
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Ernsso\Documents\ESGI\5eme_annee\DesignPattern\RPG\GUI\obj\x86\Debug\GUI.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\bin\Debug\GUI.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\bin\Debug\GUI.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\bin\Debug\RPG.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\bin\Debug\RPG.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\ResourcesDictionaries\Cell.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\ResourcesDictionaries\Character.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\App.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.cache
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI_MarkupCompile.lref
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI.g.resources
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\RPG\GUI\obj\x86\Debug\GUI.pdb
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\GUI\obj\x86\Debug\GUI.exe
+C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\GUI\obj\x86\Debug\GUI.pdb
