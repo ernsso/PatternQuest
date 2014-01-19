@@ -12,10 +12,8 @@ namespace RPG
         private SynchronizationContext context;
 
         public string Name { get; set; }
-        public int Value { get; set; }
-        public Location Location { get; set; }
+        public Location Location { get; private set; }
         public AbstractGameBoard GameBoard { get; private set; }
-
         public AbstractZone Zone
         {
             get
@@ -25,11 +23,17 @@ namespace RPG
             set
             {
                 this.Location = value.Location;
-                OnPropertyChanged("Cell");
                 OnPropertyChanged("Location");
             }
         }
 
+        public Item(AbstractGameBoard gameBoard, string n)
+        {
+            this.Name = n;
+            this.GameBoard = gameBoard;
+
+            this.context = SynchronizationContext.Current;
+        }
 
         #region PropertyChangedEventHandler
         event PropertyChangedEventHandler propertyChanged;

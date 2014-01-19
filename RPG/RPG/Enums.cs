@@ -11,3 +11,5 @@ public enum GameBoardState
     // Level loaded and ready for input.
     Running
 }
+
+public enum WeaponType { sword, spear, bow }

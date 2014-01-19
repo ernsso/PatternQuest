@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\GUI\App.xaml
-3-3767842
+6-2141834661
 
-71651337840
+8-1558490609
 132129933670
-MainWindow.xaml;ResourcesDictionaries\Cell.xaml;ResourcesDictionaries\Character.xaml;
+GameWindow.xaml;MainWindow.xaml;ResourcesDictionaries\Cell.xaml;ResourcesDictionaries\Character.xaml;ResourcesDictionaries\ExpressionDarkTheme.xaml;ResourcesDictionaries\Misc.xaml;
 
 True
 

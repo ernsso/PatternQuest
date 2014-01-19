@@ -49,7 +49,7 @@ namespace RPG
             {
                 this.Content = content;
                 content.Zone = this;
-                OnPropertyChanged("CellContent");
+                OnPropertyChanged("Content");
                 return true;
             }
             return false;

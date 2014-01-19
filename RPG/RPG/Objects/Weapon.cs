@@ -7,7 +7,14 @@ namespace RPG
 {
     public class Weapon : Item
     {
-        public string Type { get; set; }
+        public WeaponType Type { get; set; }
         public int Attack { get; set; }
+
+        public Weapon(AbstractGameBoard gameBoard, string n, int a, WeaponType wt)
+            : base(gameBoard, n)
+        {
+            this.Attack = a;
+            this.Type = wt;
+        }
     }
 }

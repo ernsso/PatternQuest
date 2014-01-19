@@ -4,146 +4,32 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib" 
         xmlns:rpg="clr-namespace:RPG;assembly=RPG"
         xmlns:gui="clr-namespace:GUI"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" KeyDown="Window_KeyDown">
+        Title="MainWindow" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="112" d:DesignWidth="735" SizeToContent="WidthAndHeight">
     <Window.Resources>
-        <gui:ObjectToTypeConverter x:Key="typeConverter" />
-        <!--<rpg:GameBoard x:Key="myGameBoard" PropertyChanged="gameBoard_PropertyChanged"></rpg:GameBoard>-->
-        
-        <!-- Displays the Treasre or Actor icon. -->
-        <Style x:Key="CellContentStyle" TargetType="{x:Type Rectangle}">
-            <Style.Triggers>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains a knight. -->
-                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Knight" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource KnightCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains an assassin. -->
-                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Assassin" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource AssassinCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains an archer. -->
-                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Archer" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource ArcherCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains a princess. -->
-                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Princess" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource PrincessCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains a warrior. -->
-                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Warrior" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource WarriorCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell contains a treasure. -->
-                        <Condition Binding="{Binding Path=Content.Name}" Value="Treasure" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Width" Value="20"/>
-                    <Setter Property="Height" Value="20"/>
-                    <Setter Property="Fill" Value="{StaticResource TreasureCellContentBrush}"/>
-                </MultiDataTrigger>
-            </Style.Triggers>
-        </Style>
-
-        <!-- Displays the appropriate cell type. -->
-        <Style x:Key="CellStyle" TargetType="{x:Type Rectangle}">
-            <Style.Triggers>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell is a wall. -->
-                        <Condition Binding="{Binding Path=Name}" Value="Wall" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource WallCellBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell is a floor cell. -->
-                        <Condition Binding="{Binding Path=Type}" Value="Floor" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource FloorCellBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell is an outer empty space cell. -->
-                        <Condition Binding="{Binding Path=Name}" Value="Space" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="Transparent"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell is a goal. -->
-                        <Condition Binding="{Binding Path=Name}" Value="Goal" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource GoalCellContentBrush}"/>
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <!-- If the cell is a goal with a treasure in it. -->
-                        <Condition Binding="{Binding Path=Name}" Value="Goal" />
-                        <Condition Binding="{Binding Path=CellContents.Name}" Value="Treasure" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Fill" Value="{StaticResource GoalActiveCellContentBrush}"/>
-                </MultiDataTrigger>
-            </Style.Triggers>
-        </Style>
-
-        <!-- All cells are styled here. -->
-        <Style x:Key="Cell" TargetType="{x:Type Button}">
+        <Style TargetType="{x:Type Button}">
+            <!-- Template for button style -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <!-- The cell, -->
-                            <Rectangle Width="40" Height="40" Style="{DynamicResource CellStyle}" />
-                            <!-- and its content. -->
-                            <Rectangle Style="{DynamicResource CellContentStyle}"/>
-                        </Grid>
+                        <!-- Content handles within a border -->
+                        <Border x:Name="bdr" CornerRadius="22" Margin="3" BorderThickness="1" BorderBrush="Black" Background="LightGray">
+                            <!-- ContentPresenter properties. Set the content source as the content from each control define below -->
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Content" TextBlock.FontSize="20" />
+                        </Border>
+                        <!-- Required triggers define here -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bdr" Property="Background" Value="DarkGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
     </Window.Resources>
-
-    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-        <StackPanel>
-            <Button Name="Move_Button" Content="Move" Click="Move_Button_Click"/>
-            <ListView Name="GameInfo_ListView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="0,5" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Player's name : "/>
-                                <TextBlock Text="{Binding Path=Name, Mode=TwoWay}"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Player's life : "/>
-                                <TextBlock Text="{Binding Path=HP, Mode=TwoWay}"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Player's job : "/>
-                                <TextBlock Text="{Binding Path=., Converter={StaticResource typeConverter}}"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackPanel>
-        <Viewbox Stretch="Uniform">
-            <Grid x:Name="grid_Game"/>
-        </Viewbox>
+    <StackPanel Orientation="Horizontal" Width="698">
+        <Button Name="SimpleSimulation_Button" Margin="10" Content="Simulation déplacement" Click="SimpleSimulation_Button_Click" Width="240" />
+        <Button Name="LabyrinthSimulation_Button" Margin="10" Content="Simulation labyrinthe" Click="LabyrinthSimulation_Button_Click" Width="212" />
+        <Button Name="QuestSimulation_Button" Margin="10" Content="Simulation spéciale" Click="QuestSimulation_Button_Click" Width="186" />
     </StackPanel>
 </Window>

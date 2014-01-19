@@ -21,7 +21,7 @@ namespace RPG
                         AbstractZone fromZone = character.GameBoard.GetAbstractZone(character.Location);
                         fromZone.RemoveContent();
                         result = toZone.TrySetContent(character);
-                        character.HP -= 10;
+                        character.HP -= 2;
                     }
                 }
             }

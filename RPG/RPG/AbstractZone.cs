@@ -14,14 +14,13 @@ namespace RPG
         public AbstractAccess leftAccess;
         public AbstractAccess rightAccess;
 
-        private SynchronizationContext context;
+        private SynchronizationContext context = SynchronizationContext.Current;
 
         public Location Location { get; set; }
         public IZoneContent Content { get; protected set; }
         
         public AbstractZone(Location location)
         {
-            this.context = SynchronizationContext.Current;
             this.Location = location;
             this.leftAccess = null;
             this.topAccess = null;
@@ -40,7 +39,7 @@ namespace RPG
         public void RemoveContent()
         {
             this.Content = null;
-            OnPropertyChanged("CellContent");
+            OnPropertyChanged("Content");
         }
 
         public abstract bool TrySetContent(IZoneContent content);
@@ -60,7 +59,7 @@ namespace RPG
             }
         }
 
-        protected void OnPropertyChanged(PropertyChangedEventArgs e)
+        void OnPropertyChanged(PropertyChangedEventArgs e)
         {
             if (propertyChanged != null)
             {

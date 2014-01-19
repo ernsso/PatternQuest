@@ -10,17 +10,24 @@ namespace RPG
 {
     abstract public class Character : AbstractObserver, IZoneContent
     {
-        public int HP { get; set; }
+        public List<Item> inventory;
+
+        private int hp;
+        private SynchronizationContext context;
+
         public string Name { get; set; }
-        public Location Location { get; set; }
+        public Location Location { get; private set; }
         public AbstractGameBoard GameBoard { get; set; }
         public MoveBehavior MoveBehavior { get; set; }
         public FightBehavior FightBehavior { get; set; }
         public EmitSoundBehavior EmitSoundBehavior { get; set; }
-        public List<Item> inventory;
+        public IZoneContent Goal{ get; set; }
 
-        private SynchronizationContext context;
-
+        public int HP
+        {
+            get { return this.hp; }
+            set { this.hp = value; OnPropertyChanged("HP"); }
+        }
         public AbstractZone Zone
         {
             get
@@ -44,6 +51,8 @@ namespace RPG
             this.FightBehavior = null;
             this.EmitSoundBehavior = null;
             this.inventory = new List<Item>();
+
+            this.context = SynchronizationContext.Current;
         }
 
         virtual public string Show()
@@ -92,7 +101,7 @@ namespace RPG
             }
         }
 
-        protected void OnPropertyChanged(PropertyChangedEventArgs e)
+        void OnPropertyChanged(PropertyChangedEventArgs e)
         {
             if (propertyChanged != null)
             {
@@ -111,15 +120,7 @@ namespace RPG
             }
             else
             {
-                context = SynchronizationContext.Current;
-                if (context == null)
-                {
-                    OnPropertyChanged(new PropertyChangedEventArgs(property));
-                }
-                else
-                {
-                    OnPropertyChanged(property);
-                }
+                OnPropertyChanged(new PropertyChangedEventArgs(property));
             }
         }
         #endregion

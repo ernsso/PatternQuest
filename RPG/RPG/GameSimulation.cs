@@ -42,22 +42,48 @@ namespace RPG
             this.GameEnvironment = new GameEnvironment(new LabyrinthFactory());
         }
 
+        public void CreateItem(AbstractGameBoard agb)
+        {
+            Food meat = new Food(agb, "Meat", 20);
+            Food orange = new Food(agb, "Orange", 20);
+            Food apple = new Food(agb, "Apple", 20);
+            Food vegetable = new Food(agb, "Vegetable", 20);
+            Weapon sword = new Weapon(agb, "Excalibur", 40, WeaponType.sword);
+            Weapon bow = new Weapon(agb, "Longbow", 20, WeaponType.sword);
+            Weapon spear = new Weapon(agb, "Gelerdria", 30, WeaponType.spear);
+            Item treasure = new Item(agb, "Treasure");
+        }
+
         public void CreateCharacter(AbstractGameBoard agb)
         {
-            Knight Arnaud = new Knight(agb, "Arnaud le terrible");
-            Assassin Jacques = new Assassin(agb, "Jacques a dit");
-            Archer Thierry = new Archer(agb, "Thierry la fronde");
+            Knight Arnaud = new Knight(agb, "Arnaud");
+            Assassin Jacques = new Assassin(agb, "Jacques");
+            Archer Thierry = new Archer(agb, "Thierry");
             characterList.Add(Arnaud);
             characterList.Add(Jacques);
             characterList.Add(Thierry);
 
-            Princess Fiona = new Princess(agb, "Fiona la belle");
+            Princess Fiona = new Princess(agb, "Fiona");
             characterList.Add(Fiona);
 
             this.SelectedCharacter = this.characterList.First();
         }
 
         public void AddCharacterOnGameBoard()
+        {
+            if (null != this.GameEnvironment.GameBoard)
+            {
+                Random random = new Random();
+                foreach (Character c in this.characterList)
+                {
+                    int row = random.Next(0, this.GameEnvironment.GameBoard.GetRowCount() - 1);
+                    int column = random.Next(0, this.GameEnvironment.GameBoard.GetColumnCount() - 1);
+                    this.GameEnvironment.GameBoard.GetAbstractZone(row, column).TrySetContent(c);
+                }
+            }
+        }
+
+        public void AddItemOnGameBoard()
         {
             if (null != this.GameEnvironment.GameBoard)
             {

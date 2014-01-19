@@ -59,8 +59,8 @@
     <Compile Include="Behaviors\EmitSoundBehavior.cs" />
     <Compile Include="Behaviors\TalkBehavior.cs" />
     <Compile Include="Behaviors\ComportementParlerPrincesse.cs" />
-    <Compile Include="IZoneContent.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="IZoneContent.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Objects\Food.cs" />
     <Compile Include="Objects\Item.cs" />
@@ -69,7 +69,7 @@
     <Compile Include="Zones\Cell.cs" />
     <Compile Include="Characters\Archer.cs" />
     <Compile Include="Characters\Assassin.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\Princess.cs" />
     <Compile Include="Characters\Warrior.cs" />
     <Compile Include="GameBoard.cs" />
