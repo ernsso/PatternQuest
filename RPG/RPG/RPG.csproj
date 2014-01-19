@@ -64,6 +64,7 @@
     <Compile Include="Location.cs" />
     <Compile Include="Objects\Food.cs" />
     <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\Treasure.cs" />
     <Compile Include="Objects\Weapon.cs" />
     <Compile Include="Zones\PatchOfLand.cs" />
     <Compile Include="Zones\Cell.cs" />
