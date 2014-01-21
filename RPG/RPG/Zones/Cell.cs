@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace RPG
 {
-    public enum CellType { Floor, Wall }
+    public enum CellType { Floor, Wall, Space, Goal }
     public class Cell : AbstractZone
     {
         public CellType Type { get; set; }

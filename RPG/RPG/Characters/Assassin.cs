@@ -8,21 +8,24 @@ namespace RPG
 {
     public class Assassin : Character
     {
+        new public Weapon Weapon
+        {
+            get { return base.Weapon; }
+            set
+            {
+                if (value.Type == WeaponType.sword || value.Type == WeaponType.dagger)
+                    base.Weapon = value;
+            }
+        }
+
         public Assassin(AbstractGameBoard gameBoard, string n)
             : base(gameBoard, n)
         {
-            this.FightBehavior = new ComportementAvecDague();
-            this.EmitSoundBehavior = new TalkBehavior();
         }
 
         public override string Show()
         {
             return "I'm the assassin" + this.Name;
-        }
-
-        public override string EmitSound()
-        {
-            return "...";
         }
 
         public override bool Move(Direction direction)

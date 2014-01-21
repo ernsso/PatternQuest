@@ -1,7 +1,22 @@
-﻿namespace RPG
+﻿using System.Linq;
+
+namespace RPG
 {
-    abstract public class FightBehavior
+    public class FightBehavior : IAction
     {
-        public abstract string Fight();
+        protected int bareHandAttack = 2;
+        protected Character attacker, target;
+
+        public FightBehavior(Character a, Character t)
+        {
+            this.attacker = a;
+            this.target = t;
+        }
+        
+        public bool Execute()
+        {
+            this.target.HP -= this.bareHandAttack;
+            return true;
+        }
     }
 }

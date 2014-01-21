@@ -12,4 +12,4 @@ public enum GameBoardState
     Running
 }
 
-public enum WeaponType { sword, spear, bow }
+public enum WeaponType { sword, spear, bow, dagger, axe, mace }

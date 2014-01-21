@@ -8,9 +8,24 @@ namespace RPG
 {
     abstract public class AbstractObservedSubject
     {
-        protected List<AbstractObserver> ObserverList;
-        abstract public void Attach();
-        abstract public void Detach();
-        abstract public void Notify();
+        protected List<AbstractObserver> ObserverList = new List<AbstractObserver>();
+
+        public void Attach(AbstractObserver observer)
+        {
+            this.ObserverList.Add(observer);
+        }
+
+        public void Detach(AbstractObserver observer)
+        {
+            this.ObserverList.Remove(observer);
+        }
+
+        public void Notify()
+        {
+            foreach (AbstractObserver o in this.ObserverList)
+            {
+                o.Update();
+            }
+        }
     }
 }

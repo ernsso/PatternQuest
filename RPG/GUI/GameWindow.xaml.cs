@@ -64,9 +64,9 @@ namespace GUI
                 MessageBox.Show("Problem loading game. " + ex.StackTrace);
             }
 
-            //GameTimer.Tick += new EventHandler(GameTimer_Tick);
-            //GameTimer.Interval = new TimeSpan(0, 0, 0, 0, 500);
-            //GameTimer.Start();
+            GameTimer.Tick += new EventHandler(GameTimer_Tick);
+            GameTimer.Interval = new TimeSpan(0, 0, 0, 2, 0);
+            GameTimer.Start();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -158,44 +158,16 @@ namespace GUI
             }
         }
 
-        private void Move_Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (GameBoard != null)
-            {
-                if (GameBoard.GameBoardState == GameBoardState.Running)
-                {
-                    Random r = new Random();
-                    foreach (Character c in this.GameSimulation.characterList)
-                    {
-                        if (c.HP > 0)
-                        {
-                            switch (r.Next(4))
-                            {
-                                case 1:
-                                    c.Move(Direction.Up);
-                                    break;
-                                case 2:
-                                    c.Move(Direction.Down);
-                                    break;
-                                case 3:
-                                    c.Move(Direction.Left);
-                                    break;
-                                case 4:
-                                    c.Move(Direction.Right);
-                                    break;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show(c.Name + " est mort");
-                        }
-                    }
-                }
-            }
-        }
+        //private void Move_Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //}
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
+            if (GameBoard != null && GameBoard.GameBoardState == GameBoardState.Running)
+                foreach (Character c in this.GameSimulation.characterList)
+                    if (c.HP > 0)
+                        c.Move();
         }
     }
 }

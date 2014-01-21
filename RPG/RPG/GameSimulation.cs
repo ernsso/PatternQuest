@@ -112,29 +112,9 @@ namespace RPG
             return result.ToString();
         }
 
-        public string EmitSoundAll()
-        {
-            var result = new StringBuilder("Emit a sound :\n");
-            foreach (var character in characterList)
-            {
-                result.AppendLine("- " + character.EmitSound());
-            }
-            return result.ToString();
-        }
-
-        public string StartFight()
-        {
-            var result = new StringBuilder("Fight :\n");
-            foreach (var character in this.characterList)
-            {
-                result.AppendLine("- " + character.Fight());
-            }
-            return result.ToString();
-        }
-
         internal void ChangerComportement()
         {
-            this.characterList[0].FightBehavior = new ComportementApiedAvecHache();
+            //this.characterList[0].FightBehavior = new ComportementApiedAvecHache();
         }
     }
 }
