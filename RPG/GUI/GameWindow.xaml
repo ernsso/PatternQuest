@@ -49,11 +49,11 @@
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
                         <!-- If the cell contains a treasure. -->
-                        <Condition Binding="{Binding Path=Content.Name}" Value="Treasure" />
+                        <Condition Binding="{Binding Path=Content, Converter={StaticResource typeConverter}}" Value="Treasure" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="Width" Value="20"/>
                     <Setter Property="Height" Value="20"/>
-                    <Setter Property="Fill" Value="{StaticResource TreasureCellContentBrush}"/>
+                    <Setter Property="Fill" Value="{StaticResource TreasureChestCellContentBrush}"/>
                 </MultiDataTrigger>
             </Style.Triggers>
         </Style>

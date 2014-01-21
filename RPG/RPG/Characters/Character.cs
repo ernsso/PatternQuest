@@ -21,6 +21,8 @@ namespace RPG
         public Location Location { get; protected set; }
         public AbstractGameBoard GameBoard { get; set; }
         public IAction Action { get; protected set; }
+        public FightBehavior FightBehavior { get; set; }
+        public AbstractMoveBehavior MoveBehavior { get; set; }
         public IZoneContent Goal{ get; set; }
 
         public int HP
@@ -60,8 +62,8 @@ namespace RPG
         
         virtual public bool Move()
         {
-            this.Action = new RandomMoveBehavior(this);
-            return this.Action.Execute();
+            this.MoveBehavior = new RandomMoveBehavior(this);
+            return this.MoveBehavior.Execute();
         }
 
         virtual public bool Move(Direction direction)
@@ -72,8 +74,8 @@ namespace RPG
 
         virtual public bool Fight(Character target)
         {
-            this.Action = new FightBehavior(this, target);
-            return this.Action.Execute();
+            this.FightBehavior = new FightBehavior(this, target);
+            return this.FightBehavior.Execute();
         }
 
         public void Execute(IAction action)

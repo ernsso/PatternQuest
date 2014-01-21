@@ -11,6 +11,7 @@ namespace RPG
     {
         public Organization jointStaff;
         public ObservableCollection<Character> characterList;
+        public ObservableCollection<Item> itemList;
         public Character SelectedCharacter { get; set; }
         public GameEnvironment GameEnvironment { get; private set; }
         public int Tour { get; private set; }
@@ -29,6 +30,7 @@ namespace RPG
         private GameSimulation()
         {
             this.characterList = new ObservableCollection<Character>();
+            this.itemList = new ObservableCollection<Item>();
             this.jointStaff = new Organization();
         }
 
@@ -44,14 +46,14 @@ namespace RPG
 
         public void CreateItem(AbstractGameBoard agb)
         {
-            Food meat = new Food(agb, "Meat", 20);
-            Food orange = new Food(agb, "Orange", 20);
-            Food apple = new Food(agb, "Apple", 20);
-            Food vegetable = new Food(agb, "Vegetable", 20);
-            Weapon sword = new Weapon(agb, "Excalibur", 40, WeaponType.sword);
-            Weapon bow = new Weapon(agb, "Longbow", 20, WeaponType.sword);
-            Weapon spear = new Weapon(agb, "Gelerdria", 30, WeaponType.spear);
-            Item treasure = new Item(agb, "Treasure");
+            //this.itemList.Add(new Food(agb, "Meat", 20));
+            //this.itemList.Add(new Food(agb, "Orange", 20));
+            //this.itemList.Add(new Food(agb, "Apple", 20));
+            //this.itemList.Add(new Food(agb, "Vegetable", 20));
+            //this.itemList.Add(new Weapon(agb, "Excalibur", 40, WeaponType.sword));
+            //this.itemList.Add(new Weapon(agb, "Longbow", 20, WeaponType.sword));
+            //this.itemList.Add(new Weapon(agb, "Gelerdria", 30, WeaponType.spear));
+            this.itemList.Add(new Treasure(agb, "Treasure", 200));
         }
 
         public void CreateCharacter(AbstractGameBoard agb)
@@ -88,11 +90,13 @@ namespace RPG
             if (null != this.GameEnvironment.GameBoard)
             {
                 Random random = new Random();
-                foreach (Character c in this.characterList)
+                int i = 0;
+                while (i < this.itemList.Count)
                 {
                     int row = random.Next(0, this.GameEnvironment.GameBoard.GetRowCount() - 1);
                     int column = random.Next(0, this.GameEnvironment.GameBoard.GetColumnCount() - 1);
-                    this.GameEnvironment.GameBoard.GetAbstractZone(row, column).TrySetContent(c);
+                    if (this.GameEnvironment.GameBoard.GetAbstractZone(row, column).TrySetContent(this.itemList.ElementAt(i)))
+                        i++;
                 }
             }
         }

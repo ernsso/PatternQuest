@@ -5,30 +5,28 @@ using System.Text;
 
 namespace RPG
 {
-    public class MoveBehavior : IAction
+    public class MoveBehavior : AbstractMoveBehavior
     {
-        private Character character;
         private Direction direction;
 
-        public MoveBehavior(Character c, Direction d)
+        public MoveBehavior(Character c, Direction d) : base(c)
         {
-            this.character = c;
             this.direction = d;
         }
 
-        public bool Execute()
+        public override bool Execute()
         {
             bool result = false;
-            if (character.HP > 0)
+            if (this.character.HP > 0)
             {
-                Location moveLocation = character.Location.GetAdjacentLocation(direction);
-                if (character.GameBoard.InBounds(moveLocation))
+                Location moveLocation = this.character.Location.GetAdjacentLocation(direction);
+                if (this.character.GameBoard.InBounds(moveLocation))
                 {
-                    AbstractZone toZone = character.GameBoard.GetAbstractZone(moveLocation);
-                    AbstractZone fromZone = character.GameBoard.GetAbstractZone(character.Location);
+                    AbstractZone toZone = this.character.GameBoard.GetAbstractZone(moveLocation);
+                    AbstractZone fromZone = this.character.GameBoard.GetAbstractZone(character.Location);
                     fromZone.RemoveContent();
-                    result = toZone.TrySetContent(character);
-                    character.HP -= 2;
+                    result = toZone.TrySetContent(this.character);
+                    this.character.HP -= 2;
                 }
             }
             return result;

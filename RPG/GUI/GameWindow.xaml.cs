@@ -46,6 +46,7 @@ namespace GUI
                 this.GameSimulation.CreateGameBoard();
             }
             this.GameSimulation.CreateCharacter(this.GameSimulation.GameEnvironment.GameBoard);
+            this.GameSimulation.CreateItem(this.GameSimulation.GameEnvironment.GameBoard);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -56,6 +57,7 @@ namespace GUI
             try
             {
                 GameBoard.Load(10, 10);
+                this.GameSimulation.AddCharacterOnGameBoard();
                 this.GameSimulation.AddItemOnGameBoard();
                 GameInfo_ListView.ItemsSource = this.GameSimulation.characterList;
             }
@@ -65,7 +67,7 @@ namespace GUI
             }
 
             GameTimer.Tick += new EventHandler(GameTimer_Tick);
-            GameTimer.Interval = new TimeSpan(0, 0, 0, 2, 0);
+            GameTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             GameTimer.Start();
         }
 

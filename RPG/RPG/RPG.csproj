@@ -49,6 +49,7 @@
     <Compile Include="AbstractObserver.cs" />
     <Compile Include="Access\Access.cs" />
     <Compile Include="Access\Adjacent.cs" />
+    <Compile Include="Behaviors\AbstractMoveBehavior.cs" />
     <Compile Include="Behaviors\FightWithBowBehavior.cs" />
     <Compile Include="Behaviors\FightBehavior.cs" />
     <Compile Include="Behaviors\IAction.cs" />

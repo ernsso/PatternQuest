@@ -5,22 +5,19 @@ namespace RPG
 {
     public class FightWithBowBehavior : FightBehavior
     {
-        private Weapon weapon;
-
-        public FightWithBowBehavior(Character a, Character t, Weapon w)
+        public FightWithBowBehavior(Character a, Character t)
             : base(a, t)
         {
-            this.weapon = w;
         }
 
         new public bool Execute()
         {
-            bool result = true;
-            try
+            bool result = false;
+            if (this.attacker.Weapon != null)
             {
-                this.target.HP -= this.attacker.inventory.Where(i => i.GetType().Equals(typeof(Weapon))).Cast<Weapon>().Where(w => w.Type == WeaponType.bow).Sum(w => w.Attack);
+                this.target.HP -= this.attacker.Weapon.Attack;
+                result = true;
             }
-            catch (Exception ex) { result = false; }
             return result;
         }
     }

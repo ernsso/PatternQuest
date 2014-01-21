@@ -5,16 +5,13 @@ using System.Text;
 
 namespace RPG
 {
-    class RandomMoveBehavior : IAction
+    class RandomMoveBehavior : AbstractMoveBehavior
     {
-        private Character character;
-
-        public RandomMoveBehavior(Character c)
+        public RandomMoveBehavior(Character c) : base(c)
         {
-            this.character = c;
         }
 
-        public bool Execute()
+        public override bool Execute()
         {
             bool result = false;
             Random r = new Random();
