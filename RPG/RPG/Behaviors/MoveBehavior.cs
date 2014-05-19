@@ -5,30 +5,39 @@ using System.Text;
 
 namespace RPG
 {
-    public class MoveBehavior : AbstractMoveBehavior
+    public class MoveBehavior
     {
-        private Direction direction;
-
-        public MoveBehavior(Character c, Direction d) : base(c)
-        {
-            this.direction = d;
-        }
-
-        public override bool Execute()
+        public bool Move(Character character, Direction direction)
         {
             bool result = false;
-            if (this.character.HP > 0)
-            {
-                Location moveLocation = this.character.Location.GetAdjacentLocation(direction);
-                if (this.character.GameBoard.InBounds(moveLocation))
+          
+
+                Location moveLocation = character.Location.GetAdjacentLocation(direction);
+                if (moveLocation.ColumnNumber >= 0 || moveLocation.ColumnNumber <= 10)
                 {
-                    AbstractZone toZone = this.character.GameBoard.GetAbstractZone(moveLocation);
-                    AbstractZone fromZone = this.character.GameBoard.GetAbstractZone(character.Location);
-                    fromZone.RemoveContent();
-                    result = toZone.TrySetContent(this.character);
-                    this.character.HP -= 2;
+                    if (moveLocation.RowNumber >= 0 || moveLocation.RowNumber <= 10)
+                    {
+                        if (character.GameBoard.InBounds(moveLocation))
+                        {
+                            lock (this)
+                            {
+                                AbstractZone toZone = character.GameBoard.GetAbstractZone(moveLocation);
+                                AbstractZone fromZone = character.GameBoard.GetAbstractZone(character.Location);
+                                fromZone.RemoveContent();
+                                result = toZone.TrySetContent(character);
+                                character.HP -= character.LosePower;
+                                if (character.HP == 0)
+                                {
+                                    
+                                    AbstractZone fromZone2 = character.GameBoard.GetAbstractZone(character.Location);
+                                    fromZone2.RemoveContent();
+                                }
+                            }
+                        }
+                    }
                 }
-            }
+           
+              
             return result;
         }
     }

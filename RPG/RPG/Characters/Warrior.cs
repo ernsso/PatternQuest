@@ -8,19 +8,13 @@ namespace RPG
 {
     public class Warrior : Character
     {
-        new public Weapon Weapon
-        {
-            get { return base.Weapon; }
-            set
-            {
-                if (value.Type == WeaponType.axe || value.Type == WeaponType.mace)
-                    base.Weapon = value;
-            }
-        }
-
         public Warrior(AbstractGameBoard gameBoard, string n)
             : base(gameBoard ,n)
         {
+            this.FightBehavior = new ComportementApiedAvecHache();
+            this.EmitSoundBehavior = new ScreamBehavior();
+            this.State = true;
+            this.LosePower = 2;
         }
 
         public override string Show()

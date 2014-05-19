@@ -46,7 +46,7 @@ namespace GUI
                 this.GameSimulation.CreateGameBoard();
             }
             this.GameSimulation.CreateCharacter(this.GameSimulation.GameEnvironment.GameBoard);
-            this.GameSimulation.CreateItem(this.GameSimulation.GameEnvironment.GameBoard);
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -57,8 +57,8 @@ namespace GUI
             try
             {
                 GameBoard.Load(10, 10);
-                this.GameSimulation.AddCharacterOnGameBoard();
                 this.GameSimulation.AddItemOnGameBoard();
+                //this.GameSimulation.createFinishPoint(this.GameSimulation.GameEnvironment.GameBoard);
                 GameInfo_ListView.ItemsSource = this.GameSimulation.characterList;
             }
             catch (Exception ex)
@@ -66,9 +66,9 @@ namespace GUI
                 MessageBox.Show("Problem loading game. " + ex.StackTrace);
             }
 
-            GameTimer.Tick += new EventHandler(GameTimer_Tick);
-            GameTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
-            GameTimer.Start();
+            //GameTimer.Tick += new EventHandler(GameTimer_Tick);
+            //GameTimer.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            //GameTimer.Start();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -81,18 +81,7 @@ namespace GUI
                     {
                         switch (e.Key)
                         {
-                            case Key.Up:
-                                this.GameSimulation.SelectedCharacter.Move(Direction.Up);
-                                break;
-                            case Key.Down:
-                                this.GameSimulation.SelectedCharacter.Move(Direction.Down);
-                                break;
-                            case Key.Left:
-                                this.GameSimulation.SelectedCharacter.Move(Direction.Left);
-                                break;
-                            case Key.Right:
-                                this.GameSimulation.SelectedCharacter.Move(Direction.Right);
-                                break;
+                            /*g */
                         }
                     }
                     else { MessageBox.Show(this.GameSimulation.SelectedCharacter.Name + " est mort"); }
@@ -133,6 +122,7 @@ namespace GUI
                     Button button = new Button();
                     button.Focusable = false;
                     button.DataContext = cell;
+                    button.Background = Brushes.Red;
                     button.Padding = new Thickness(0, 0, 0, 0);
                     button.Style = (Style)Resources["Cell"];
 
@@ -160,16 +150,97 @@ namespace GUI
             }
         }
 
-        //private void Move_Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //}
+        private void Move_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (GameBoard != null)
+            {
+                if (GameBoard.GameBoardState == GameBoardState.Running)
+                {
+                    Random r = new Random();
+                    int maxNb = 4;
+                    int Nb = 0;
+                    //foreach (Character c in this.GameSimulation.characterList)
+                    for (int i=0; i< this.GameSimulation.characterList.Count();i++)
+                    {
+                        
+                            if (this.GameSimulation.f2.Location.RowNumber > this.GameSimulation.characterList[i].Location.RowNumber)
+                            {
+                                Nb = 2;
+                                //MessageBox.Show(this.GameSimulation.characterList[i].Name + " down");
+
+                            }
+                            else
+                            {
+                                if (this.GameSimulation.f2.Location.RowNumber < this.GameSimulation.characterList[i].Location.RowNumber)
+                                {
+                                    Nb = 1;
+                                    //MessageBox.Show(this.GameSimulation.characterList[i].Name + " up");
+                                }
+                                else 
+                                {
+                                    //MessageBox.Show(this.GameSimulation.characterList[i].Name + " same");
+                                    if (this.GameSimulation.f2.Location.RowNumber == this.GameSimulation.characterList[i].Location.RowNumber && this.GameSimulation.f2.Location.ColumnNumber != this.GameSimulation.characterList[i].Location.ColumnNumber)
+                                    {
+
+                                        if (this.GameSimulation.f2.Location.ColumnNumber > this.GameSimulation.characterList[i].Location.ColumnNumber)
+                                        {
+                                            Nb = 4;
+                                            //MessageBox.Show(this.GameSimulation.characterList[i].Name + " right");
+                                        }
+                                        else if (this.GameSimulation.f2.Location.ColumnNumber < this.GameSimulation.characterList[i].Location.ColumnNumber)
+                                        {
+                                            Nb = 3;
+                                            //MessageBox.Show(this.GameSimulation.characterList[i].Name + " left");
+                                        }
+                                    }
+                                    
+                                    
+                                }
+                            }
+
+                            if (this.GameSimulation.f2.Location.RowNumber == this.GameSimulation.characterList[i].Location.RowNumber && this.GameSimulation.f2.Location.ColumnNumber == this.GameSimulation.characterList[i].Location.ColumnNumber)
+                            {
+                                MessageBox.Show(this.GameSimulation.characterList[i].Name + " Finished");
+                            }
+                            else
+                            {
+                               // MessageBox.Show(this.GameSimulation.characterList[i].Name + " ee");
+                             if (this.GameSimulation.characterList[i].HP > 0)
+                                {
+
+                                    switch (Nb)
+                                    {
+                                        case 1:
+                                            this.GameSimulation.characterList[i].Move(Direction.Up);
+                                            break;
+                                        case 2:
+                                            this.GameSimulation.characterList[i].Move(Direction.Down);
+                                            break;
+                                        case 3:
+                                            this.GameSimulation.characterList[i].Move(Direction.Left);
+                                            break;
+                                        case 4:
+                                            this.GameSimulation.characterList[i].Move(Direction.Right);
+                                            break;
+                                    }
+                                }
+                                else if (this.GameSimulation.characterList[i].State)
+                                {
+                                    // this.GameSimulation.characterList[i].Move(Direction.Up);
+                                    MessageBox.Show(this.GameSimulation.characterList[i].Name + " est mort");
+                                    this.GameSimulation.characterList[i].State = false;
+                                    //this.GameSimulation.characterList.Remove(this.GameSimulation.characterList[i]);
+
+
+                                }
+                            }
+                    }
+                }
+            }
+        }
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            if (GameBoard != null && GameBoard.GameBoardState == GameBoardState.Running)
-                foreach (Character c in this.GameSimulation.characterList)
-                    if (c.HP > 0)
-                        c.Move();
         }
     }
 }

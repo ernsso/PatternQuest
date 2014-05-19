@@ -8,11 +8,13 @@ namespace RPG
 {
     public class Princess : Character
     {
-        new public Weapon Weapon { get { return null; } private set { } }
-     
         public Princess(AbstractGameBoard gameBoard, string n)
             : base(gameBoard, n)
         {
+            this.FightBehavior = null;
+            this.EmitSoundBehavior = new ComportementParlerPrincesse();
+            this.State = true;
+            this.LosePower = 1;
         }
 
         public override string Show()
@@ -20,9 +22,9 @@ namespace RPG
             return "I'm the princess" + this.Name;
         }
 
-        new public bool Fight(Character target)
+        public override bool Move(Direction direction)
         {
-            return false;
+            return base.Move(direction);
         }
 
         public override void Update()

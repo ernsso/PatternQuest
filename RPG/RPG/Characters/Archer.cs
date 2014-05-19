@@ -8,19 +8,13 @@ namespace RPG
 {
     public class Archer : Character
     {
-        new public Weapon Weapon
-        {
-            get { return base.Weapon; }
-            set
-            {
-                if (value.Type == WeaponType.bow)
-                    base.Weapon = value;
-            }
-        }
-
         public Archer(AbstractGameBoard gameBoard, string n)
             : base(gameBoard, n)
         {
+            this.FightBehavior = new ComportementAvecArc();
+            this.EmitSoundBehavior = new TalkBehavior();
+            this.State = true;
+            this.LosePower = 10;
         }
 
         public override string Show()

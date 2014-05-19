@@ -13,13 +13,7 @@ namespace RPG
 
     public class Organization : AbstractObservedSubject
     {
-        private Mode mode;
-
-        public Mode Mode
-        {
-            get { return this.mode; }
-            set { this.mode = value; this.Notify(); }
-        }
+        public Mode mode { get; set; }
         public Organization parent { get; set; }
 
         public Organization()
@@ -30,12 +24,19 @@ namespace RPG
             this.parent = _parent;
         }
 
-        public void Order(IAction action)
+        public override void Notify()
         {
-            foreach (Character c in this.ObserverList)
-            {
-                c.Execute(action);
-            }
+            throw new NotImplementedException();
+        }
+
+        public override void Attach()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Detach()
+        {
+            throw new NotImplementedException();
         }
     }
 }

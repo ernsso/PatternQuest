@@ -16,14 +16,14 @@ namespace RPG
         private SynchronizationContext context;
 
         public string Name { get; set; }
-        public Weapon Weapon { get; protected set; }
-        public Organization Organization { get; set; }
-        public Location Location { get; protected set; }
+        public Location Location { get; private set; }
         public AbstractGameBoard GameBoard { get; set; }
-        public IAction Action { get; protected set; }
+        public MoveBehavior MoveBehavior { get; set; }
         public FightBehavior FightBehavior { get; set; }
-        public AbstractMoveBehavior MoveBehavior { get; set; }
+        public EmitSoundBehavior EmitSoundBehavior { get; set; }
         public IZoneContent Goal{ get; set; }
+        public Boolean State { get; set; }
+        public int LosePower { get; set; }
 
         public int HP
         {
@@ -49,7 +49,9 @@ namespace RPG
             this.HP = 100;
             this.Name = n;
             this.GameBoard = gameBoard;
-            this.Action = new RandomMoveBehavior(this);
+            this.MoveBehavior = new MoveBehavior();
+            this.FightBehavior = null;
+            this.EmitSoundBehavior = null;
             this.inventory = new List<Item>();
 
             this.context = SynchronizationContext.Current;
@@ -59,28 +61,26 @@ namespace RPG
         {
             return this.Name;
         }
-        
-        virtual public bool Move()
+
+        virtual public string EmitSound()
         {
-            this.MoveBehavior = new RandomMoveBehavior(this);
-            return this.MoveBehavior.Execute();
+            if (null != this.EmitSoundBehavior)
+                return this.EmitSoundBehavior.EmitSound();
+            return "noise";
         }
 
         virtual public bool Move(Direction direction)
         {
-            this.Action = new MoveBehavior(this, direction);
-            return this.Action.Execute();
+            if (null == this.MoveBehavior)
+                this.MoveBehavior = new MoveBehavior();
+            return this.MoveBehavior.Move(this, direction);
         }
 
-        virtual public bool Fight(Character target)
+        virtual public string Fight()
         {
-            this.FightBehavior = new FightBehavior(this, target);
-            return this.FightBehavior.Execute();
-        }
-
-        public void Execute(IAction action)
-        {
-            action.Execute();
+            if (null != this.FightBehavior)
+                return this.FightBehavior.Fight();
+            return "I don't fight."; 
         }
 
         public override void Update()

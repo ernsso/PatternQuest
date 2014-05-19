@@ -1,5 +1,21 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingBrush x:Key="FinishCell" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1.33317,0,0,1.33317,0,2.09808e-005"/>
+                        </DrawingGroup.Transform>
+                        <DrawingGroup.Children>
+                            <ImageDrawing ImageSource="../Images/finish.png" Rect="0,0,1015,676"/>
+                        </DrawingGroup.Children>
+                    </DrawingGroup>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
     <DrawingBrush x:Key="KnightCellContentBrush" Stretch="Uniform">
         <DrawingBrush.Drawing>
             <DrawingGroup>

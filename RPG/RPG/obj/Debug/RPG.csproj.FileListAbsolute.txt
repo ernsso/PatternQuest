@@ -21,3 +21,9 @@ C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Des
 C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\RPG\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\RPG\obj\Debug\RPG.exe
 C:\Documents and Settings\pierre jean\Mes documents\Ernsso\ESGI\5 eme année\Design Pattern\PatternQuest\RPG\RPG\obj\Debug\RPG.pdb
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\obj\Debug\RPG.exe
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\obj\Debug\RPG.pdb
+C:\Users\webmaster.SMALLBUSINESS\Downloads\PatternQuest-master\RPG\RPG\obj\Debug\RPG.csprojResolveAssemblyReference.cache
